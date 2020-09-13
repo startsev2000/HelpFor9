@@ -1,0 +1,25 @@
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap-grid";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color !important;
+}
+
+.leftBlot {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: auto;
+}
+.rightBlot {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
