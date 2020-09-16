@@ -191,6 +191,7 @@
       height: 60%;
       width: auto;
       margin-bottom: 40px;
+      margin-top: -20px;
       @media (max-width: $large) {
           display: none;
       } 
@@ -201,6 +202,7 @@
       height: 60%;
       width: auto;
       left: auto;
+      
       right: 0;
       top: 0;
       @media (max-width: $large) {

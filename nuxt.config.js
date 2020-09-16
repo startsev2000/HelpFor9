@@ -72,7 +72,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  },
+    extend(config, ctx) {},
+    transpile: ['help-for-9']
+    },
   styleResources: {
     scss: [
       './assets/styles.scss'
