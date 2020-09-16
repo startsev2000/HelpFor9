@@ -1,6 +1,6 @@
 <template>
   <div class="quote d-flex flex-row">
-    <svg class="left-bracket" width="27" height="112" viewBox="0 0 27 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="left-bracket" width="25" height="70" viewBox="0 0 27 112" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d)">
         <path d="M2.6084 0.380005H20.3184V5.11H8.10839V98.61H20.3184V103.34H2.6084V0.380005Z" :fill="color"/>
       </g>
@@ -17,7 +17,7 @@
       </defs>
     </svg>
     <p><slot></slot></p>
-    <svg class="right-bracket" width="27" height="112" viewBox="0 0 27 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="right-bracket" width="25" height="70" viewBox="0 0 27 112" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d)">
         <path d="M24.3916 103.62H6.6816V98.89H18.8916L18.8916 5.39002H6.6816L6.6816 0.660019H24.3916L24.3916 103.62Z" :fill="color"/>
       </g>
