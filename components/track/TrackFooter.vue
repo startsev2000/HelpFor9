@@ -128,12 +128,41 @@
         } as LyceumTrackObject<FooterContent>
       }
     },
-    /*computed: {
-      fullPatternPath(): string {
-        return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg'
+    computed: {
+      fullPatternPath(): any {
+        if (this.track == 'mathinfo') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       }
+       if (this.track == 'mathec') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'math') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'socec') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'hum') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'design') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'oriental') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'psysoc') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'law') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       } 
+       if (this.track == 'sci') {
+          return this.linePattern.root + this.linePattern.patterns[this.track] + '.svg';
+       }
       }
     },
-    */
+    
     watch: {
       track(newValue: string, oldValue: string): void {
         this.renderAvailable = newValue !== ''
