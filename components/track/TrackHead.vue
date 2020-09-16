@@ -139,7 +139,7 @@
           font-weight: 700;
           font-family: 'IBM Plex Sans';
           margin-top: -12px;
-          -webkit-text-stroke: 2px $header-color;
+          -webkit-text-stroke: 1px $header-color;
           @media (max-width: $large) {
             font-size: 24px;
             font-weight: 200;

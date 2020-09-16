@@ -21,24 +21,6 @@
   export default Vue.extend({
     name: "error",
     props: ['error'],
-    /*
-    computed: {
-      sub: function() {
-        if (Object.keys(this.subs).includes("" + this.error.statusCode)) {
-          return this.subs[this.error.statusCode]
-        } else {
-          return this.subs.default
-        }
-      },
-      description: function() {
-        if (Object.keys(this.descriptions).includes("" + this.error.statusCode)) {
-          return this.descriptions[this.error.statusCode]
-        } else {
-          return this.descriptions.default
-        }
-      }
-    },
-    */
     data() {
       return {
         subs: {
@@ -65,7 +47,6 @@
         margin: auto auto;
         img {
           display: inline;
-          width: 128px;
           margin: auto 0;
           @media (max-width: $small) {
             width: 60%;
