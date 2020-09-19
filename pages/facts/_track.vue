@@ -1,12 +1,10 @@
 <template>
   <div class="facts">
-    <div v-if="available">
-      <div>
-        <img class="left-blot" src="/img/ui/blots/blot_left_2.svg">
-        <img class="right-blot" src="/img/ui/blots/blot_right_2.svg"> 
-        <div class="header">
-          <span class="name">Что такое {{ tracksAvailable[trackName] }}?</span>
-        </div>
+    <img class="left-blot" src="/img/ui/blots/blot_left_4.svg">
+    <img class="right-blot" src="/img/ui/blots/blot_right_4.svg"> 
+    <div v-if="available" class="available container d-flex">   
+      <div class="header">
+          <span>Что такое {{ tracksAvailable[trackName] }}?</span>
       </div>
     </div>
     <div v-else class="not-available container d-flex">
@@ -27,7 +25,7 @@
 
 <script lang="ts">
   import Vue from 'vue'
-
+  
   export default Vue.extend({
     name: "Facts",
     validate({ params }): boolean {
@@ -87,4 +85,69 @@
       }
     }
   }
+  .available {
+    position: relative;
+    padding: 0;
+    .header {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 32px;
+        span {
+          color: transparent;
+          width: fit-content;
+          display: block;
+          font-size: 44px;
+          font-weight: 700;
+          font-family: 'IBM Plex Sans';
+          margin-top: -12px;
+          -webkit-text-stroke: 1px $header-color;
+          @media (max-width: $large) {
+            font-size: 24px;
+            font-weight: 200;
+            color: $header-color;
+            font-family: 'IBM Plex Sans';
+            -webkit-text-stroke: 1px $header-color;
+          } 
+        }
+      }
+      .mind {
+        span {
+          color: transparent;
+          font-size: 48px;
+          font-weight: 700;
+          font-family: 'IBM Plex Sans';
+        }
+      }
+    }
+      .footer {
+        margin-top: 32px;
+        margin-bottom: 64px;
+      }
+    .small-header {
+      width: 60% !important;
+    }
+    .track-head-menu {
+      position: absolute;
+      left: auto;
+      right: 48px;
+      top: 48px;
+    }
+    .left-blot {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      margin-bottom: 40px;
+      margin-top: -20px;
+      
+    }
+    .right-blot {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      left: auto;
+      right: 0;
+      top: 0; 
+    }
+
 </style>
