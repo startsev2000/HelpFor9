@@ -1,7 +1,13 @@
 <template>
   <div class="facts">
     <div v-if="available">
-
+      <div>
+        <img class="left-blot" src="/img/ui/blots/blot_left_2.svg">
+        <img class="right-blot" src="/img/ui/blots/blot_right_2.svg"> 
+        <div class="header">
+          <span class="name">Что такое {{ tracksAvailable[trackName] }}?</span>
+        </div>
+      </div>
     </div>
     <div v-else class="not-available container d-flex">
       <div style="margin: auto; position: relative;">
