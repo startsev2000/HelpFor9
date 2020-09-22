@@ -36,6 +36,53 @@
         <p class="foreground-text" v-if="track === 'psysoc'" >Что такое психология?</p>
         <p class="background-text" v-if="track === 'psysoc'" >Что такое психология?</p>
         <p class="transparent-text" v-if="track === 'psysoc'" >Что такое психология?</p>
+
+        <div class="facts">
+          <li class="fact1" v-if="track === 'mathinfo'">Мореееееее программирования!</li>
+          <li class="fact2" v-if="track === 'mathinfo'">Направление, которое занимает очень много времени</li>
+          <li class="fact3" v-if="track === 'mathinfo'">Решение уравнений в целых числах необычным способом</li>
+          <li class="fact4" v-if="track === 'mathinfo'">Очень сильная математика</li>
+          <li class="fact5" v-if="track === 'mathinfo'">Шутки про программистов!</li>
+
+          <li class="fact1" v-if="track === 'mathec'">Тяжело, но приятно)))</li>
+          <li class="fact2" v-if="track === 'mathec'">Лучшие люди, лучшее здание!</li>
+          <li class="fact3" v-if="track === 'mathec'">Много математики, много экономики</li>
+          <li class="fact4" v-if="track === 'mathec'">Куча дедлайнов и мало сна:) но оно того стоит!</li>
+
+          <li class="fact1" v-if="track === 'socec'">Милые и дружелюбные ребята</li>
+          <li class="fact2" v-if="track === 'socec'">Вечная конкуренция за возможность вставить слово</li>
+          <li class="fact3" v-if="track === 'socec'">У - универсальность</li>
+          <li class="fact4" v-if="track === 'socec'">Много обществознания</li>
+          <li class="fact5" v-if="track === 'socec'">Ботать и тащить олимпиады</li>
+          <li class="fact6" v-if="track === 'socec'">Трата времени неконтролируемо и беспощадно</li>
+          <li class="fact7" v-if="track === 'socec'">СЕМЬЯ!</li>
+
+          <li class="fact1" v-if="track === 'hum'">Вечные шутки Базарова</li>
+          <li class="fact2" v-if="track === 'hum'">Это бывшие дизайнеры</li>
+          <li class="fact3" v-if="track === 'hum'">Литературные шутки, которые никто не понимает</li>
+          <li class="fact4" v-if="track === 'hum'">Самые разнообразные творческие люди</li>
+
+          <li class="fact1" v-if="track === 'design'">Бесконечный творческий хаос</li>
+          <li class="fact2" v-if="track === 'design'">Вечная подготовка к просмотру</li>
+          <li class="fact3" v-if="track === 'design'">Н - нестандартность!</li>
+
+          <li class="fact1" v-if="track === 'law'">Сложная матеша и легкое право</li>
+          <li class="fact2" v-if="track === 'law'">Шутки о российском законодательстве</li>
+          <li class="fact3" v-if="track === 'law'">Семья, в которой постоянно спорят</li>
+          <li class="fact4" v-if="track === 'law'">Сборище политиков</li>
+          <li class="fact5" v-if="track === 'law'">Серьёзные люди с кодексами</li>
+
+          <li class="fact1" v-if="track === 'oriental'">Восточная любовь, уютный бот и тепло</li>
+          <li class="fact2" v-if="track === 'oriental'">Атмосфера тепла и любви</li>
+          <li class="fact3" v-if="track === 'oriental'">Уют и ламповость</li>
+          <li class="fact4" v-if="track === 'oriental'">Самый теплый коллектив</li>
+          <li class="fact5" v-if="track === 'oriental'">Когда ты начинаешь предложение на русском и заканчиваешь на арабском:)</li>
+
+          <li class="fact1" v-if="track === 'psysoc'">Психоанализы по Свинке Пеппе:)</li>
+          <li class="fact2" v-if="track === 'psysoc'">Психология - это всё по Фрейду</li>
+          <li class="fact3" v-if="track === 'psysoc'">Микроскопы</li>
+        </div>
+        
       </div>
       
     </div>
@@ -80,16 +127,6 @@
         tracksAvailable: [
           'hum', 'oriental', 'psysoc', 'design', 'mathec', 'socec', 'mathinfo', 'law'
         ] as Array<String>,
-        titles: [
-          {'mathinfo': 'Матинфо'},
-          {'hum': 'Гум'},
-          {'mathec': 'Матэк'},
-          {'oriental': 'Восток'},
-          {'psysoc': 'Психология'}, 
-          {'design': 'Дизайн'},
-          {'socec': 'Соцэк'},
-          {'law': 'Юр'}
-        ]
       }
     },
     computed: {
@@ -168,10 +205,10 @@
         }
       }
     }
-      .footer {
-        margin-top: 32px;
-        margin-bottom: 64px;
-      }
+    .footer {
+      margin-top: 32px;
+      margin-bottom: 64px;
+    }
     .small-header {
       width: 60% !important;
     }
@@ -196,6 +233,35 @@
       left: auto;
       right: 0;
       top: 0; 
+    }
+    .facts {
+      font-size: 36px;
+      font-family: 'Montserrat';
+      margin-bottom: -10px;
+      .fact1 {
+        list-style-image: url('/img/ui/factpages/num1.svg');
+      }
+      .fact2 {
+        list-style-image: url('/img/ui/factpages/num2.svg');
+      }
+      .fact3 {
+        list-style-image: url('/img/ui/factpages/num3.svg');
+      }
+      .fact4 {
+        list-style-image: url('/img/ui/factpages/num4.svg');
+      }
+      .fact5 {
+        list-style-image: url('/img/ui/factpages/num5.svg');
+      }
+      .fact6 {
+        list-style-image: url('/img/ui/factpages/num6.svg');
+      }
+      .fact7 {
+        list-style-image: url('/img/ui/factpages/num7.svg');
+      }
+      .fact8 {
+        list-style-image: url('/img/ui/factpages/num8.svg');
+      }
     }
 
 </style>
