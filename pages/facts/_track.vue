@@ -4,15 +4,40 @@
     <img class="right-blot" src="/img/ui/blots/blot_right_4.svg"> 
     <div v-if="available" class="available container d-flex">   
       <div class="header">
-          <span v-if="track === 'mathinfo'">Что такое матинфо?</span>
-          <span v-if="track === 'mathec'">Что такое матэк?</span>
-          <span v-if="track === 'socec'">Что такое соцэк?</span>
-          <span v-if="track === 'hum'">Что такое гум?</span>
-          <span v-if="track === 'design'">Что такое дизайн?</span>
-          <span v-if="track === 'law'">Что такое юриспруденция?</span>
-          <span v-if="track === 'oriental'">Что такое восток?</span>
-          <span v-if="track === 'psysoc'">Что такое психология?</span>
+
+        <p class="foreground-text" v-if="track === 'mathinfo'" >Что такое матинфо?</p>
+        <p class="background-text" v-if="track === 'mathinfo'" >Что такое матинфо?</p>
+        <p class="transparent-text" v-if="track === 'mathinfo'" >Что такое матинфо?</p>
+
+        <p class="foreground-text" v-if="track === 'mathec'" >Что такое матэк?</p>
+        <p class="background-text" v-if="track === 'mathec'" >Что такое матэк?</p>
+        <p class="transparent-text" v-if="track === 'mathec'" >Что такое матэк?</p>
+
+        <p class="foreground-text" v-if="track === 'socec'" >Что такое соцэк?</p>
+        <p class="background-text" v-if="track === 'socec'" >Что такое соцэк?</p>
+        <p class="transparent-text" v-if="track === 'socec'" >Что такое соцэк?</p>
+
+        <p class="foreground-text" v-if="track === 'hum'" >Что такое гум?</p>
+        <p class="background-text" v-if="track === 'hum'" >Что такое гум?</p>
+        <p class="transparent-text" v-if="track === 'hum'" >Что такое гум?</p>
+
+        <p class="foreground-text" v-if="track === 'design'" >Что такое дизайн?</p>
+        <p class="background-text" v-if="track === 'design'" >Что такое дизайн?</p>
+        <p class="transparent-text" v-if="track === 'design'" >Что такое дизайн?</p>
+
+        <p class="foreground-text" v-if="track === 'law'" >Что такое юр?</p>
+        <p class="background-text" v-if="track === 'law'" >Что такое юр?</p>
+        <p class="transparent-text" v-if="track === 'law'" >Что такое юр?</p>
+
+        <p class="foreground-text" v-if="track === 'oriental'" >Что такое восток?</p>
+        <p class="background-text" v-if="track === 'oriental'" >Что такое восток?</p>
+        <p class="transparent-text" v-if="track === 'oriental'" >Что такое восток?</p>
+
+        <p class="foreground-text" v-if="track === 'psysoc'" >Что такое психология?</p>
+        <p class="background-text" v-if="track === 'psysoc'" >Что такое психология?</p>
+        <p class="transparent-text" v-if="track === 'psysoc'" >Что такое психология?</p>
       </div>
+      
     </div>
     <div v-else class="not-available container d-flex">
       <div style="margin: auto; position: relative;">
@@ -79,7 +104,7 @@
 </script>
 
 <style scoped lang="scss">
-  .not-available {
+  .not-available, .available {
     height: 100vh;
     .transparent-text {
       color: transparent;
