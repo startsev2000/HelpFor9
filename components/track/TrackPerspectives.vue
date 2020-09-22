@@ -24,7 +24,16 @@
             <img src="/img/ui/perspectives/3.png">
             <div>
               <!--<span>Факты и советы</span>-->
-              <p><a>[Coming soon]   Интересные факты про направление и советы от нынешних десятых</a></p>
+              <p v-if="track === 'mathinfo'"><a href='/facts/mathinfo'>Интересные факты про матинфо и советы от нынешних десятых</a></p>
+              <p v-if="track === 'mathec'"><a href='/facts/mathec'>Интересные факты про матэк и советы от нынешних десятых</a></p>
+              <p v-if="track === 'socec'"><a href='/facts/socec'>Интересные факты про соцэк и советы от нынешних десятых</a></p>
+              <p v-if="track === 'hum'"><a href='/facts/hum'>Интересные факты про гум и советы от нынешних десятых</a></p>
+              <p v-if="track === 'design'"><a href='/facts/design'>Интересные факты про дизайн и советы от нынешних десятых</a></p>
+              <p v-if="track === 'law'"><a href='/facts/law'>Интересные факты про юр и советы от нынешних десятых</a></p>
+              <p v-if="track === 'oriental'"><a href='/facts/oriental'>Интересные факты про восток и советы от нынешних десятых</a></p>
+              <p v-if="track === 'psysoc'"><a href='/facts/psysoc'>Интересные факты про психологию и советы от нынешних десятых</a></p>
+              <p v-if="track === 'math'"><a href='/facts/math'>Интересные факты про математику и советы от нынешних десятых</a></p>
+              <p v-if="track === 'sci'"><a href='/facts/sci'>Интересные факты про ЕН и советы от нынешних десятых</a></p>
             </div>
           </div>
         </div>
