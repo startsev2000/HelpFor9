@@ -24,16 +24,16 @@
             <img src="/img/ui/perspectives/3.png">
             <div>
               <!--<span>Факты и советы</span>-->
-              <p v-if="track === 'mathinfo'"><a href='/facts/mathinfo'>Интересные факты про матинфо и советы от нынешних десятых</a></p>
-              <p v-if="track === 'mathec'"><a href='/facts/mathec'>Интересные факты про матэк и советы от нынешних десятых</a></p>
-              <p v-if="track === 'socec'"><a href='/facts/socec'>Интересные факты про соцэк и советы от нынешних десятых</a></p>
-              <p v-if="track === 'hum'"><a href='/facts/hum'>Интересные факты про гум и советы от нынешних десятых</a></p>
-              <p v-if="track === 'design'"><a href='/facts/design'>Интересные факты про дизайн и советы от нынешних десятых</a></p>
-              <p v-if="track === 'law'"><a href='/facts/law'>Интересные факты про юр и советы от нынешних десятых</a></p>
-              <p v-if="track === 'oriental'"><a href='/facts/oriental'>Интересные факты про восток и советы от нынешних десятых</a></p>
-              <p v-if="track === 'psysoc'"><a href='/facts/psysoc'>Интересные факты про психологию и советы от нынешних десятых</a></p>
-              <p v-if="track === 'math'"><a href='/facts/math'>Интересные факты про математику и советы от нынешних десятых</a></p>
-              <p v-if="track === 'sci'"><a href='/facts/sci'>Интересные факты про ЕН и советы от нынешних десятых</a></p>
+              <p v-if="track === 'mathinfo'"><router-link to="/facts/mathinfo">Интересные факты про матинфо и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'mathec'"><router-link to='/facts/mathec'>Интересные факты про матэк и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'socec'"><router-link to='/facts/socec'>Интересные факты про соцэк и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'hum'"><router-link to='/facts/hum'>Интересные факты про гум и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'design'"><router-link to='/facts/design'>Интересные факты про дизайн и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'law'"><router-link to='/facts/law'>Интересные факты про юр и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'oriental'"><router-link to='/facts/oriental'>Интересные факты про восток и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'psysoc'"><router-link to='/facts/psysoc'>Интересные факты про психологию и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'math'"><router-link to='/facts/math'>Интересные факты про математику и советы от нынешних десятых</router-link></p>
+              <p v-if="track === 'sci'"><router-link to='/facts/sci'>Интересные факты про ЕН и советы от нынешних десятых</router-link></p>
             </div>
           </div>
         </div>

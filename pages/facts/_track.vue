@@ -37,7 +37,7 @@
         <p class="background-text" v-if="track === 'psysoc'" >Что такое психология?</p>
         <p class="transparent-text" v-if="track === 'psysoc'" >Что такое психология?</p>
 
-        <div class="facts">
+        <div class="facts1">
           <li class="fact1" v-if="track === 'mathinfo'">Мореееееее программирования!</li>
           <li class="fact2" v-if="track === 'mathinfo'">Направление, которое занимает очень много времени</li>
           <li class="fact3" v-if="track === 'mathinfo'">Решение уравнений в целых числах необычным способом</li>
@@ -224,7 +224,10 @@
       width: auto;
       margin-bottom: 40px;
       margin-top: -20px;
-      
+      @media (max-width: $large) {
+        height: 50%;
+        width: auto;
+      }
     }
     .right-blot {
       position: absolute;
@@ -233,34 +236,50 @@
       left: auto;
       right: 0;
       top: 0; 
+      @media (max-width: $large) {
+        height: 50%;
+        width: auto;
+      }
     }
-    .facts {
+    .facts1 {
       font-size: 36px;
       font-family: 'Montserrat';
       margin-bottom: -10px;
+      padding-left: 2px;
       .fact1 {
         list-style-image: url('/img/ui/factpages/num1.svg');
+        padding-left: 2px;
       }
       .fact2 {
         list-style-image: url('/img/ui/factpages/num2.svg');
+        padding-left: 2px;
       }
       .fact3 {
         list-style-image: url('/img/ui/factpages/num3.svg');
+        padding-left: 2px;
       }
       .fact4 {
         list-style-image: url('/img/ui/factpages/num4.svg');
+        padding-left: 2px;
       }
       .fact5 {
         list-style-image: url('/img/ui/factpages/num5.svg');
+        padding-left: 2px;
       }
       .fact6 {
         list-style-image: url('/img/ui/factpages/num6.svg');
+        padding-left: 2px;
       }
       .fact7 {
         list-style-image: url('/img/ui/factpages/num7.svg');
+        padding-left: 2px;
       }
       .fact8 {
         list-style-image: url('/img/ui/factpages/num8.svg');
+        padding-left: 2px;
+      }
+      @media (max-width: $large) {
+        font-size: 18px;
       }
     }
 
