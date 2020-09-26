@@ -81,6 +81,11 @@
           <li class="fact1" v-if="track === 'psysoc'">Психоанализы по Свинке Пеппе:)</li>
           <li class="fact2" v-if="track === 'psysoc'">Психология - это всё по Фрейду</li>
           <li class="fact3" v-if="track === 'psysoc'">Микроскопы</li>
+          <div>
+            <img class="image" v-if="track === 'design'" src="/img/ui/factpages/facts_design.svg">
+            <img class="image" v-if="track === 'psysoc'" src="/img/ui/factpages/facts_psysoc.svg">
+            <img class="image" v-if="track === 'oriental'" src="/img/ui/factpages/facts_oriental.svg">
+          </div>
         </div>
         
       </div>
@@ -242,10 +247,13 @@
       }
     }
     .facts1 {
-      font-size: 36px;
+      font-size: 28px;
       font-family: 'Montserrat';
       margin-bottom: -10px;
       padding-left: 2px;
+      .image {
+        margin: auto;
+      }
       .fact1 {
         list-style-image: url('/img/ui/factpages/num1.svg');
         padding-left: 2px;
