@@ -4,7 +4,7 @@
     <img class="right-blot" src="/img/ui/blots/blot_right_4.svg"> 
     <div v-if="available" class="available container d-flex">   
       <div class="header">
-
+        
         <p class="foreground-text" v-if="track === 'mathinfo'" >Что такое матинфо?</p>
         <p class="background-text" v-if="track === 'mathinfo'" >Что такое матинфо?</p>
         <p class="transparent-text" v-if="track === 'mathinfo'" >Что такое матинфо?</p>
@@ -81,11 +81,11 @@
           <li class="fact1" v-if="track === 'psysoc'">Психоанализы по Свинке Пеппе:)</li>
           <li class="fact2" v-if="track === 'psysoc'">Психология - это всё по Фрейду</li>
           <li class="fact3" v-if="track === 'psysoc'">Микроскопы</li>
-          <div>
+          <!--<div class="imgs">
             <img class="image" v-if="track === 'design'" src="/img/ui/factpages/facts_design.svg">
             <img class="image" v-if="track === 'psysoc'" src="/img/ui/factpages/facts_psysoc.svg">
             <img class="image" v-if="track === 'oriental'" src="/img/ui/factpages/facts_oriental.svg">
-          </div>
+          </div>-->
         </div>
         
       </div>
@@ -288,6 +288,20 @@
       }
       @media (max-width: $large) {
         font-size: 18px;
+      }
+    }
+    .imgs {
+      position: absolute;
+      left: 500px;
+      bottom: 200px;
+      display: inline;
+      padding: 0;
+      margin: 0;
+      @media (max-width: $large) {
+        left: 300px;
+        bottom: 40px;
+        height: 80%;
+        width: 80%;
       }
     }
 
