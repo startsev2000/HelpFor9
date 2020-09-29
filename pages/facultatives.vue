@@ -1,21 +1,21 @@
 <template>
     <div class="facultatives">
-        <!--<img class="left-blot" src="/img/ui/blots/blot_left_2.svg">
-        <img class="right-blot" src="/img/ui/blots/blot_right_2.svg">-->
-        <div class="header">
-            <span class="facname">Список факультативов</span>
-            <span class="facname">Список факультативов</span>
+        <img class="left-blot" src="/img/ui/blots/blot_left_2.svg">
+        <img class="right-blot" src="/img/ui/blots/blot_right_2.svg">
+        <div class="header" align="left">
+            <span class="facname_transparent">Список факультативов</span>
+            <span class="facname_transparent">Список факультативов</span>
             <span class="facname">Список факультативов</span>
         </div>
         <div class="main-table">
-            <div class="selector">
-                <select class="select">
-                    <option id="1">По зданиям</option>
-                    <option id="2">По кафедрам</option>
+            <div class="select">
+                <select class="selector">
+                    <option>По кафедрам</option>
+                    <option>По зданиям</option>
                 </select>
             </div>
             <div class="facult_table">
-                <table class="fac_table">
+                <table align="center" class="fac_table" cellpadding="30em" width="75%">
                     <tr class="table_head">
                         <th>Название факультатива</th>
                         <th>Время</th>
@@ -56,13 +56,13 @@ export default {
         position: relative;
         padding: 0;
         .header {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 32px;
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 32px;
+            padding-bottom: 16px;
         }
-        .facname {
-            color: transparent;
+        .facname_transparent, .facname {
             width: fit-content;
             display: block;
             font-size: 44px;
@@ -73,23 +73,17 @@ export default {
             @media (max-width: $large) {
                 font-size: 24px;
                 font-weight: 200;
-                color: $header-color;
-                font-family: 'IBM Plex Sans';
                 -webkit-text-stroke: 1px $header-color;
             } 
-            span:first-child {
-                margin-top: 0;
-                @media (max-width: $large) {
-                    display: none;
-                } 
+        }
+        .facname_transparent {
+            color: transparent;
+            @media (max-width: $large) {
+                display: none;
             }
-            span:last-child {
-                color: $header-color;
-                -webkit-text-stroke-width: 0;
-                @media (max-width: $large) {
-                    display: none;
-                }
-            }
+        }
+        .facname {
+            color: $header-color;
         }
     }
     .fac_table, .select{
@@ -99,22 +93,24 @@ export default {
             font-size: 14px;
         }
     }
+    .main-table {
+        padding-top: 20px;
+    }
+    .select {
+        padding-bottom: 20px;
+        margin-left: 20em;
+        
+        margin-right: auto;
+    }
     .selector {
         border: 1.5px solid rgb(156, 187, 114);
         position: absolute;
-        margin-left: 50em;
-        margin-right: auto;
-        margin-bottom: 20em;
+        
     }
     table {
         border: rgba(83, 74, 74, 0.5) 1px solid;
         border-collapse: collapse;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        width: 1500px;
-        margin: auto;
-        @media (max-width: $large) {
-            width: 360px;
-        }
     }
 
     th {
@@ -144,6 +140,29 @@ export default {
     }
     .table_head {
         height: 80px;
+    }
+    .left-blot {
+      position: absolute;
+      height: 60%;
+      width: auto;
+      margin-bottom: 40px;
+      margin-top: -20px;
+      @media (max-width: $large) {
+          display: none;
+      } 
+      
+    }
+    .right-blot {
+      position: absolute;
+      height: 60%;
+      width: auto;
+      left: auto;
+      
+      right: 0;
+      top: 0;
+      @media (max-width: $large) {
+          display: none;
+      } 
     }
 
 </style>
