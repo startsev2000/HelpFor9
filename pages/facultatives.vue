@@ -2,79 +2,66 @@
     <div class="facultatives">
         <!--<img class="left-blot" src="/img/ui/blots/blot_left_2.svg">
         <img class="right-blot" src="/img/ui/blots/blot_right_2.svg">-->
-        <span class="name1">⠀⠀⠀⠀Список факультативов</span>
-        <span class="name1">⠀⠀⠀⠀Список факультативов</span>
-        <span class="name2">⠀⠀⠀⠀Список факультативов</span>
-        <div>
-            <span class="bracket">[</span>
-            <div class="quote_rext">
-                Лучше не брать больше 1-2 факультативов для того, чтобы справляться с нагрузкой
-            </div>
-            <span class="bracket">]</span>
+        <div class="header">
+            <span class="facname">Список факультативов</span>
+            <span class="facname">Список факультативов</span>
+            <span class="facname">Список факультативов</span>
         </div>
-        <div>
-            <table class="lowerContent_table">
-                <thead>
-                    <tr>
-                        <th class="th">Название факультатива</th>
-                        <th class="th">Дата и время</th>
-                        <th class="th">Преподаватель</th>
+        <div class="main-table">
+            <div class="selector">
+                <select class="select">
+                    <option id="1">По зданиям</option>
+                    <option id="2">По кафедрам</option>
+                </select>
+            </div>
+            <div class="facult_table">
+                <table class="fac_table">
+                    <tr class="table_head">
+                        <th>Название факультатива</th>
+                        <th>Время</th>
+                        <th>Преподаватель</th>
                     </tr>
-                </thead>
-                <tbody class="fac_body">
-                    <tr>
-                    <td>
-                        <div class="fac-desc">
-                            <div class="fac-desc_header">
-                                Экспериментальная химия
-                            </div>
-                            <div class="fac-desc_body">
-                                Взрывы, интересные эксперименты, ракеты - все это на экспериментальной химии. Вы научитесь вырабатывать алгоритм получения различных
-                                веществ с заданными химическими и физическими свойствами и проводить их
-                                идентификацию.
-                            </div>
-                        </div>
-                    </td>
-                    <td>Понедельник
-                        5 пара,16:20
-                        ауд. 215, Солянка</td>
-                    <td>Васильев Васильев Васильевич</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="fac-desc">
-                                <div class="fac-desc_header">
-                                    Экспериментальная химия
-                                </div>
-                                <div class="fac-desc_body">
-                                    Взрывы, интересные эксперименты, ракеты - все это на экспериментальной химии. Вы научитесь вырабатывать алгоритм получения различных
-                                    веществ с заданными химическими и физическими свойствами и проводить их
-                                    идентификацию.
-                                </div>
-                            </div>
-                        </td>
-                        <td>Понедельник
-                            5 пара,16:20
-                            ауд. 215, Солянка
-                        </td>
-                        <td>Васильев Васильев Васильевич</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h4>Facultative name</h4>
+                                <p>Facultative brief description</p>
+                            </td>
+                            <td>
+                                Date and time
+                            </td>
+                            <td>
+                                Name of the teacher
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-  
 </template>
 
-<script>
-export default {
+<script lang="ts">
 
+import Vue from 'vue'
+import TrackHeadMenu from '~/components/track/TrackHeadMenu.vue'
+
+export default {
+    
 }
 </script>
 
 <style scoped lang="scss">
     .facultatives {
-        .name1, .name2 {
+        position: relative;
+        padding: 0;
+        .header {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 32px;
+        }
+        .facname {
             color: transparent;
             width: fit-content;
             display: block;
@@ -83,72 +70,80 @@ export default {
             font-family: 'IBM Plex Sans';
             margin-top: -12px;
             -webkit-text-stroke: 1px $header-color;
-
-        .name1 {
-            margin-top: 0;
             @media (max-width: $large) {
-                display: none;
+                font-size: 24px;
+                font-weight: 200;
+                color: $header-color;
+                font-family: 'IBM Plex Sans';
+                -webkit-text-stroke: 1px $header-color;
             } 
-        }
-        .name2 {
-            color: $header-color;
-            -webkit-text-stroke-width: 0;
-            @media (max-width: $large) {
-                display: none;
+            span:first-child {
+                margin-top: 0;
+                @media (max-width: $large) {
+                    display: none;
+                } 
+            }
+            span:last-child {
+                color: $header-color;
+                -webkit-text-stroke-width: 0;
+                @media (max-width: $large) {
+                    display: none;
+                }
             }
         }
+    }
+    .fac_table, .select{
+        font-family: Montserrat;
+        font-size: 18px;
+        @media (max-width: $large) {
+            font-size: 14px;
         }
     }
-    .lowerContent_table {
-        width: 100%;
-        min-height: 200px;
-        margin-top: 30px;
+    .selector {
+        border: 1.5px solid rgb(156, 187, 114);
+        position: absolute;
+        margin-left: 50em;
+        margin-right: auto;
+        margin-bottom: 20em;
+    }
+    table {
+        border: rgba(83, 74, 74, 0.5) 1px solid;
+        border-collapse: collapse;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 1500px;
+        margin: auto;
+        @media (max-width: $large) {
+            width: 360px;
+        }
+    }
+
+    th {
+        border-right: 1px rgba(83, 74, 74, 0.5) solid;
+        color: white;
+        background-color: rgb(154, 198, 147);
+        font-weight: normal;
         text-align: center;
-        border-collapse: separate;
-        border-spacing: 0;
-        background-color: #f7e3a3;
-        font-family: Montserrat;
     }
-    .th {
-        border-bottom: 0;
-        height: 66px;
-        background: rgba(139, 174, 114, 0.7);
-        font-size: 16px;
-        font-family: Montserrat;
-        line-height: 20px;
+
+    td {
+        border-right: 1px rgba(83, 74, 74, 0.5) solid;
+        font-weight: normal;
         text-align: center;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        color: #FFF;
     }
-    .fac-desc {
-        padding: 15px 0;
-        font-family: Montserrat;
+
+    h4 {
+        text-decoration: underline rgba(6, 6, 6, 0.13);
+        font-weight: normal;
+        margin-bottom: 0;
+        text-align: center;
     }
-    .fac-desc_header {
-        font-size: 16px;
-        line-height: 20px;
-        display: inline;
-        border-bottom: 1px solid rgba(6, 6, 6, 0.13);
-        color: #000;
-        font-family: Montserrat;
+
+    p {
+        color: rgb(81, 65, 65);
+        text-align: center;
     }
-    .fac-desc_body {
-        font-size: 12px;
-        font-family: Montserrat;
+    .table_head {
+        height: 80px;
     }
-    .left-blot {
-      position: absolute;
-      height: 60%;
-      width: auto;
-      margin-bottom: 40px;
-      margin-top: -20px;
-    }
-    .right-blot {
-      position: absolute;
-      height: 60%;
-      width: auto;
-      left: auto;
-      right: 0;
-      top: 0;
-    }
+
 </style>
