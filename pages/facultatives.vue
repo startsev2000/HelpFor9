@@ -86,7 +86,7 @@ export default {
             color: $header-color;
         }
     }
-    .fac_table, .select{
+    .fac_table, .selector{
         font-family: Montserrat;
         font-size: 18px;
         @media (max-width: $large) {
@@ -96,16 +96,14 @@ export default {
     .main-table {
         padding-top: 20px;
     }
-    .select {
-        padding-bottom: 20px;
+    .select { //div
+        padding-bottom: 25px;
         margin-left: 20em;
-        
         margin-right: auto;
     }
-    .selector {
+    .selector { //select
         border: 1.5px solid rgb(156, 187, 114);
         position: absolute;
-        
     }
     table {
         border: rgba(83, 74, 74, 0.5) 1px solid;
