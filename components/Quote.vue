@@ -65,10 +65,18 @@
     }
     .left-bracket {
       margin-left: 0;
+      @media (max-width: $large) {
+          height: 140;
+          width: 50;
+      } 
     }
     .right-bracket {
       margin-right: 0;
       margin-left: auto;
+      @media (max-width: $large) {
+          height: 140;
+          width: 50;
+      } 
     }
   }
 </style>

@@ -257,34 +257,42 @@
       .fact1 {
         list-style-image: url('/img/ui/factpages/num1.svg');
         padding-left: 2px;
+        padding-bottom: 5px;
       }
       .fact2 {
         list-style-image: url('/img/ui/factpages/num2.svg');
         padding-left: 2px;
+        padding-bottom: 5px;
       }
       .fact3 {
         list-style-image: url('/img/ui/factpages/num3.svg');
         padding-left: 2px;
+        padding-bottom: 10px;
       }
       .fact4 {
         list-style-image: url('/img/ui/factpages/num4.svg');
         padding-left: 2px;
+        padding-bottom: 10px;
       }
       .fact5 {
         list-style-image: url('/img/ui/factpages/num5.svg');
         padding-left: 2px;
+        padding-bottom: 10px;
       }
       .fact6 {
         list-style-image: url('/img/ui/factpages/num6.svg');
         padding-left: 2px;
+        padding-bottom: 10px;
       }
       .fact7 {
         list-style-image: url('/img/ui/factpages/num7.svg');
         padding-left: 2px;
+        padding-bottom: 10px;
       }
       .fact8 {
         list-style-image: url('/img/ui/factpages/num8.svg');
         padding-left: 2px;
+        padding-bottom: 10px;
       }
       @media (max-width: $large) {
         font-size: 18px;

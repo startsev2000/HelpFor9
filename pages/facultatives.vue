@@ -95,9 +95,10 @@ export default {
     }
     .main-table {
         padding-top: 20px;
+        position: relative;
     }
     .select { //div
-        padding-bottom: 25px;
+        padding-bottom: 28px;
         margin-left: 20em;
         margin-right: auto;
     }
